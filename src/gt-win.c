@@ -153,7 +153,7 @@ key_press_cb(GtkWidget* widget,
 
     g_object_get(self->player, "playing", &playing, NULL);
 
-    if (evt->keyval & GDK_KEY_space)
+    if (evt->keyval == GDK_KEY_space)
     {
         if (MAIN_VISIBLE_CHILD == self->player)
         {
@@ -163,7 +163,7 @@ key_press_cb(GtkWidget* widget,
                 gt_player_play(GT_PLAYER(self->player));
         }
     }
-    else if (evt->keyval & GDK_KEY_Escape)
+    else if (evt->keyval == GDK_KEY_Escape)
     {
         if (MAIN_VISIBLE_CHILD == self->player)
             if (priv->fullscreen)
