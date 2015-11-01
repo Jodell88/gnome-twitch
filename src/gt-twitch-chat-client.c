@@ -356,7 +356,7 @@ gt_twitch_chat_client_join(GtTwitchChatClient* self, const gchar* channel)
 GtTwitchChatMessage*
 gt_twitch_chat_message_new()
 {
-    return g_new0(GtTwitchChatMessage, 1);
+    return g_try_new0(GtTwitchChatMessage, 1);
 }
 
 void
